@@ -12,7 +12,7 @@ import Particles from 'react-particles-js';
 
 const app = new Clarifai.App({apiKey: 'c009ea2b6bc648a7a310673357055538'});
 
-
+//for particles in UI
 const ParticlesOptions={
                    particles: {
                         shape: {
@@ -26,6 +26,21 @@ const ParticlesOptions={
   
         }
 
+  const initialState={
+        input:'',
+        imageUrl:'',
+        box:{},
+        route:'signin',
+        isSignedIn:false,
+        user: {
+          id:'',
+          name:'',
+          email:'',
+          entries:0,
+          joined: ''
+        }
+  }
+
 
 class App extends React.Component {
     constructor(){
@@ -36,9 +51,34 @@ class App extends React.Component {
         imageUrl:'',
         box:{},
         route:'signin',
-        isSignedIn:false
+        isSignedIn:false,
+        user: {
+          id:'',
+          name:'',
+          email:'',
+          entries:0,
+          joined: ''
+        }
       }
     }
+
+
+    loadUser=(data)=>{
+      console.log('loadUser:',data);
+      this.setState({user:{
+        id:data.id,
+        name:data.name,
+        email: data.email,
+        entries:data.entries,
+        joined: data.joined
+      }})
+    }
+
+    /*componentDidMount(){
+      fetch('http://localhost:3000')
+      .then(response=> response.json())
+      .then(console.log)
+    }*/
 
     calculateFaceLocation=(data)=>{
       //console.log('calculateFaceLocation:', data);
@@ -71,20 +111,30 @@ class App extends React.Component {
 
     //connection the api server . API server response with the necessary result
    app.models.predict(Clarifai.FACE_DETECT_MODEL , this.state.input)
-   .then(response=> this.displayFaceBox(this.calculateFaceLocation(response))) //{
-     // console.log('onButtonSubmit:',response);
-      //first sending the response data to calculateFaceLocation and then forwarding it to displayFaceBox
-      //this.displayFaceBox(this.calculateFaceLocation(response));
-    
-   // }
-
+   .then(response=> {
+      if(response){
+        //connecting to owns server through api
+        fetch('http://localhost:3000/image',{
+          method:'put',
+          headers:{'content-Type': 'application/json'},
+          body:JSON.stringify({
+              id:this.state.user.id
+            })
+        })
+            .then(response => response.json())
+            .then(count => {
+              this.setState(Object.assign(this.state.user, {entries:count}))
+            })
+      }
+      this.displayFaceBox(this.calculateFaceLocation(response))
+   } ) 
     .catch(err => console.log(err));
   }
 
   onRouteChange=(route)=>{
     //console.log('onRouteChange');
     if(route==='signout'){
-      this.setState({isSignedIn:false})
+      this.setState(initialState)
     } else if(route==='home'){
       this.setState({isSignedIn:true})
     }
@@ -102,7 +152,10 @@ class App extends React.Component {
           {route==='home'
             ?<div> {/*home*/}
                 <Logo/>
-                <Rank/>
+                <Rank 
+                  name={this.state.user.name}
+                  entries={this.state.user.entries}
+                />
                 <ImageLinkForm 
                     onInputChange={this.onInputChange}
                     onButtonSubmit={this.onButtonSubmit}
@@ -112,8 +165,8 @@ class App extends React.Component {
              </div>
             : (route==='signin'
               /*Signin-->onRouteChange*/
-              ? <Signin onRouteChange={this.onRouteChange}/> 
-              : <Register onRouteChange={this.onRouteChange}/>
+              ? <Signin  onRouteChange={this.onRouteChange} loadUser={this.loadUser}/> 
+              : <Register  onRouteChange={this.onRouteChange } loadUser={this.loadUser}/>
              )
           }
           
