@@ -44,7 +44,7 @@ class Signin extends React.Component {
 		const {onRouteChange}= this.props;
 		return(
 		<div >
-             <articles className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
+             <articles className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center bg-white ">
 				<main className="pa4 black-80">
 				  <div className="measure ">
 				    <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
@@ -57,6 +57,9 @@ class Signin extends React.Component {
 				           type="email" 
 				           name="email-address"  
 				           id="email-address"
+				           placeholder="Enter Email"
+				           autoFocus
+				           required
 				         />
 				      </div>
 				      <div className="mv3">
@@ -67,6 +70,8 @@ class Signin extends React.Component {
 				          type="password" 
 				          name="password"  
 				          id="password"
+				          placeholder="Enter Password"
+				          required
 				         />
 				      </div>
 				    </fieldset>
@@ -81,7 +86,7 @@ class Signin extends React.Component {
 				    <div className="lh-copy mt3">
 				      <p 
 				        onClick={()=>onRouteChange('register')} 
-				        className="f6 link dim black db pointer">
+				        className="f5 link dim black db pointer">
 				        Register
 				      </p>
 				    </div>

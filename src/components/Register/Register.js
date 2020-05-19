@@ -67,6 +67,9 @@ class Signin extends React.Component {
 				          name="name"  
 				          id="name"
 				          onChange={this.onNameChange}
+				          required
+				          placeholder="Enter Name"
+				          autoFocus
 				        />
 				      </div>
 				      <div className="mt3">
@@ -77,6 +80,8 @@ class Signin extends React.Component {
 				          name="email-address"  
 				          id="email-address"
 				          onChange={this.onEmailChange}
+				          placeholder="Enter Email "
+				          required
 				        />
 				      </div>
 				      <div className="mv3">
@@ -87,8 +92,23 @@ class Signin extends React.Component {
 				          name="password"  
 				          id="password"
 				          onChange={this.onPasswordChange}
+				          placeholder="Enter Password"
+				          required
 				        />
 				      </div>
+
+				      {/*<div className="mv3">
+				        <label className="db fw6 lh-copy f6" htmlFor="password">Repeat Password</label>
+				        <input 
+				          className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
+				          type="password" 
+				          name="password"  
+				          id="password"
+				          onChange={this.onPasswordChange}
+				          placeholder="Repeat Password"
+				          required
+				        />
+				      </div>*/}
 				    </fieldset>
 				    <div className="">
 				      <input

@@ -2,12 +2,13 @@ import React from 'react';
 import Clarifai from 'clarifai';
 import './App.css';
 import Navigation from './components/Navigation/Navigation';
-import Logo from './components/Logo/Logo';
+
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import Signin from './components/Signin/Signin';
 import Register from './components/Register/Register';
 import Rank from './components/Rank/Rank';
+import Footer from './components/Footer/Footer';
 import Particles from 'react-particles-js';
 
 const app = new Clarifai.App({apiKey: 'c009ea2b6bc648a7a310673357055538'});
@@ -151,7 +152,7 @@ class App extends React.Component {
           <Navigation onRouteChange={this.onRouteChange} isSignedIn={isSignedIn}/>
           {route==='home'
             ?<div> {/*home*/}
-                <Logo/>
+                
                 <Rank 
                   name={this.state.user.name}
                   entries={this.state.user.entries}
@@ -169,6 +170,7 @@ class App extends React.Component {
               : <Register  onRouteChange={this.onRouteChange } loadUser={this.loadUser}/>
              )
           }
+          <Footer />
           
         </div>
       );

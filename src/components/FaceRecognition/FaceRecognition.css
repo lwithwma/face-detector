@@ -9,3 +9,9 @@
     justify-content: center;
     cursor: pointer;
 }
+
+#inputimage{
+	margin: 17px;
+	box-shadow: 5px 10px 8px 1px grey;
+	border-radius: 4%;
+}
