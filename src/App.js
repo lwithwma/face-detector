@@ -115,7 +115,7 @@ class App extends React.Component {
    .then(response=> {
       if(response){
         //connecting to owns server through api
-        fetch('http://localhost:3000/image',{
+        fetch('https://immense-depths-47217.herokuapp.com/image',{
           method:'put',
           headers:{'content-Type': 'application/json'},
           body:JSON.stringify({
