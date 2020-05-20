@@ -146,9 +146,9 @@ class App extends React.Component {
    const {isSignedIn, route, imageUrl, box}=this.state; //distructor
       return (
         <div className="App">
-           <Particles className="particles"
+           {/*<Particles className="particles"
              params={ParticlesOptions}
-           />
+           />*/}
           <Navigation onRouteChange={this.onRouteChange} isSignedIn={isSignedIn}/>
           {route==='home'
             ?<div> {/*home*/}
