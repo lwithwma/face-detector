@@ -28,7 +28,8 @@ class Signin extends React.Component {
 		this.setState({registerPassword:events.target.value});
 	}
     
-   onSubmitRegister=()=>{
+   onSubmitRegister=(event)=>{
+   	     event.preventDefault();
 		//console.log(this.state);
 		//fetch by default use GET method to API server,so use othe method we have to describe it by creating object.
 		//JSON.stringify() used to convert javascript object to JSON 
@@ -60,7 +61,7 @@ class Signin extends React.Component {
 		<div >
              <articles className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
 				<main className="pa4 black-80">
-				  <div className="measure ">
+				  <form className="measure " onSubmit={this.onSubmitRegister}>
 				    <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
 				      <legend className="f1 fw6 ph0 mh0">Register</legend>
 				      <div className="mt3">
@@ -115,15 +116,16 @@ class Signin extends React.Component {
 				      </div>*/}
 				    </fieldset>
 				    <div className="">
+				    {/*onClick={this.onSubmitRegister}*/}
 				      <input
-					       onClick={this.onSubmitRegister}
+					       
 					      //onClick={()=>this.props.onRouteChange('home')}
 					       className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" 
 					       type="submit" 
 					       value="Register"
 				      />
 				    </div>
-				  </div>
+				  </form>
 				</main>
 			</articles>
 
