@@ -14,7 +14,7 @@ import Particles from 'react-particles-js';
 const app = new Clarifai.App({apiKey: 'c009ea2b6bc648a7a310673357055538'});
 
 //for particles in UI
-const ParticlesOptions={
+/*const ParticlesOptions={
                    particles: {
                         shape: {
                             type: 'images',
@@ -25,7 +25,7 @@ const ParticlesOptions={
                         }
                     }
   
-        }
+        }*/
 
   const initialState={
         input:'',
@@ -146,9 +146,9 @@ class App extends React.Component {
    const {isSignedIn, route, imageUrl, box}=this.state; //distructor
       return (
         <div className="App">
-           <Particles className="particles"
+           {/*<Particles className="particles"
              params={ParticlesOptions}
-           />
+           />*/}
           <Navigation onRouteChange={this.onRouteChange} isSignedIn={isSignedIn}/>
           {route==='home'
             ?<div> {/*home*/}
