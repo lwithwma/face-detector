@@ -2,3 +2,18 @@
 	background: linear-gradient(89deg, #FF5EDF 0%,#04C8DE 100%);
 	/*background-color: #70a1ff;*/
 }
+
+.logoImg{
+	height: 150px;
+	width: 150px;
+	margin-top: 10px;
+
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .logoImg{
+  	height: 90px;
+  	width: 90px;
+  }
+  }
