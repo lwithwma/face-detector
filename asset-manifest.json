@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/lwithwma/facerecognition/static/css/main.add5e616.chunk.css",
-    "main.js": "/lwithwma/facerecognition/static/js/main.61da339f.chunk.js",
-    "main.js.map": "/lwithwma/facerecognition/static/js/main.61da339f.chunk.js.map",
-    "runtime-main.js": "/lwithwma/facerecognition/static/js/runtime-main.61cfd629.js",
-    "runtime-main.js.map": "/lwithwma/facerecognition/static/js/runtime-main.61cfd629.js.map",
-    "static/css/2.036b41f9.chunk.css": "/lwithwma/facerecognition/static/css/2.036b41f9.chunk.css",
-    "static/js/2.789e8489.chunk.js": "/lwithwma/facerecognition/static/js/2.789e8489.chunk.js",
-    "static/js/2.789e8489.chunk.js.map": "/lwithwma/facerecognition/static/js/2.789e8489.chunk.js.map",
-    "index.html": "/lwithwma/facerecognition/index.html",
-    "precache-manifest.bf886d74fffd70f37c94ad355710469d.js": "/lwithwma/facerecognition/precache-manifest.bf886d74fffd70f37c94ad355710469d.js",
-    "service-worker.js": "/lwithwma/facerecognition/service-worker.js",
-    "static/css/2.036b41f9.chunk.css.map": "/lwithwma/facerecognition/static/css/2.036b41f9.chunk.css.map",
-    "static/css/main.add5e616.chunk.css.map": "/lwithwma/facerecognition/static/css/main.add5e616.chunk.css.map",
-    "static/js/2.789e8489.chunk.js.LICENSE.txt": "/lwithwma/facerecognition/static/js/2.789e8489.chunk.js.LICENSE.txt"
+    "main.css": "/face-detector/static/css/main.add5e616.chunk.css",
+    "main.js": "/face-detector/static/js/main.353f6b33.chunk.js",
+    "main.js.map": "/face-detector/static/js/main.353f6b33.chunk.js.map",
+    "runtime-main.js": "/face-detector/static/js/runtime-main.1ae112dd.js",
+    "runtime-main.js.map": "/face-detector/static/js/runtime-main.1ae112dd.js.map",
+    "static/css/2.036b41f9.chunk.css": "/face-detector/static/css/2.036b41f9.chunk.css",
+    "static/js/2.ac2cfef5.chunk.js": "/face-detector/static/js/2.ac2cfef5.chunk.js",
+    "static/js/2.ac2cfef5.chunk.js.map": "/face-detector/static/js/2.ac2cfef5.chunk.js.map",
+    "index.html": "/face-detector/index.html",
+    "precache-manifest.f354cac4a6db7617fd1d67b0ce5cb4cc.js": "/face-detector/precache-manifest.f354cac4a6db7617fd1d67b0ce5cb4cc.js",
+    "service-worker.js": "/face-detector/service-worker.js",
+    "static/css/2.036b41f9.chunk.css.map": "/face-detector/static/css/2.036b41f9.chunk.css.map",
+    "static/css/main.add5e616.chunk.css.map": "/face-detector/static/css/main.add5e616.chunk.css.map",
+    "static/js/2.ac2cfef5.chunk.js.LICENSE.txt": "/face-detector/static/js/2.ac2cfef5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.61cfd629.js",
+    "static/js/runtime-main.1ae112dd.js",
     "static/css/2.036b41f9.chunk.css",
-    "static/js/2.789e8489.chunk.js",
+    "static/js/2.ac2cfef5.chunk.js",
     "static/css/main.add5e616.chunk.css",
-    "static/js/main.61da339f.chunk.js"
+    "static/js/main.353f6b33.chunk.js"
   ]
 }
