@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/lwithwma/face-detector/static/css/main.add5e616.chunk.css",
+    "main.js": "/lwithwma/face-detector/static/js/main.f89f2eed.chunk.js",
+    "main.js.map": "/lwithwma/face-detector/static/js/main.f89f2eed.chunk.js.map",
+    "runtime-main.js": "/lwithwma/face-detector/static/js/runtime-main.3b27e075.js",
+    "runtime-main.js.map": "/lwithwma/face-detector/static/js/runtime-main.3b27e075.js.map",
+    "static/css/2.036b41f9.chunk.css": "/lwithwma/face-detector/static/css/2.036b41f9.chunk.css",
+    "static/js/2.fbd7b5ad.chunk.js": "/lwithwma/face-detector/static/js/2.fbd7b5ad.chunk.js",
+    "static/js/2.fbd7b5ad.chunk.js.map": "/lwithwma/face-detector/static/js/2.fbd7b5ad.chunk.js.map",
+    "index.html": "/lwithwma/face-detector/index.html",
+    "precache-manifest.303fc34cd6c69cd79fcad2490091086c.js": "/lwithwma/face-detector/precache-manifest.303fc34cd6c69cd79fcad2490091086c.js",
+    "service-worker.js": "/lwithwma/face-detector/service-worker.js",
+    "static/css/2.036b41f9.chunk.css.map": "/lwithwma/face-detector/static/css/2.036b41f9.chunk.css.map",
+    "static/css/main.add5e616.chunk.css.map": "/lwithwma/face-detector/static/css/main.add5e616.chunk.css.map",
+    "static/js/2.fbd7b5ad.chunk.js.LICENSE.txt": "/lwithwma/face-detector/static/js/2.fbd7b5ad.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3b27e075.js",
+    "static/css/2.036b41f9.chunk.css",
+    "static/js/2.fbd7b5ad.chunk.js",
+    "static/css/main.add5e616.chunk.css",
+    "static/js/main.f89f2eed.chunk.js"
+  ]
+}
