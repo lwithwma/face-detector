@@ -7,7 +7,7 @@ class Signin extends React.Component {
 		super(props);
 		this.state={
 			signInEmail:'',
-			signInPassword:''
+			signInPassword:'',
 		}
 	}
 
@@ -36,6 +36,12 @@ class Signin extends React.Component {
 			if(user.id){
 				this.props.loadUser(user);
 				this.props.onRouteChange('home');
+			} else if(user==="wrong credentials"){
+                 window.alert("You have Entered wrong Credentials. Please Register and try Again!! ");
+			}else if(user==="wrong credential"){
+				window.alert("You have Entered wrong Email or Password . Please try Again!! ");
+			}else{
+				window.alert("You have to Enter Email and Password . Please try Again!! ");
 			}
 		})
 	}
@@ -58,7 +64,6 @@ class Signin extends React.Component {
 				           name="email-address"  
 				           id="email-address"
 				           placeholder="Enter Email"
-				           autoFocus
 				           required
 				         />
 				      </div>

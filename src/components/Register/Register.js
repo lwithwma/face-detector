@@ -46,6 +46,10 @@ class Signin extends React.Component {
 			if(user.id){
 				this.props.loadUser(user);
 				this.props.onRouteChange('home');
+			} else if(user==="incorrect data submission"){
+				window.alert("Incorrect Data Submission. Please try Again!!");
+			}else{
+				window.alert("Error!! Unable to Register. Please try Again!!");
 			}
 		})
 	}
@@ -69,7 +73,7 @@ class Signin extends React.Component {
 				          onChange={this.onNameChange}
 				          required
 				          placeholder="Enter Name"
-				          autoFocus
+				          
 				        />
 				      </div>
 				      <div className="mt3">

@@ -65,7 +65,7 @@ class App extends React.Component {
 
 
     loadUser=(data)=>{
-      console.log('loadUser:',data);
+     // console.log('loadUser:',data);
       this.setState({user:{
         id:data.id,
         name:data.name,

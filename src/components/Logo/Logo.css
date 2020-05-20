@@ -4,8 +4,8 @@
 }
 
 .logoImg{
-	height: 150px;
-	width: 150px;
+	height: 100px;
+	width: 100px;
 	margin-top: 10px;
 
 }
@@ -13,7 +13,7 @@
 @media only screen and (max-width: 600px) {
   
   .logoImg{
-  	height: 90px;
-  	width: 90px;
+  	height: 65px;
+  	width: 65px;
   }
   }
